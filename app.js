@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const connectDB = require('./database/connection');
+const connectDB = require('./database/connection'); 
 const authRoutes = require('./routes/auth');
 const noteRoutes = require('./routes/notes');
 const errorHandler = require('./middleware/errorhandler');
@@ -16,6 +16,7 @@ app.use(cors({
   origin: process.env.FRONTEND_URL || 'http://localhost:3000',
   credentials: true,
 }));
+
 app.use(express.json());
 app.use(cookieParser());
 

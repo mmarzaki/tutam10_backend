@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    // BERSIHKAN: Hapus useNewUrlParser dan useUnifiedTopology
+    // FIX: Kosongkan opsi di belakang URL karena sudah otomatis
     const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/notesapp');
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
@@ -11,5 +11,4 @@ const connectDB = async () => {
   }
 };
 
-// EKSPOR LANGSUNG
 module.exports = connectDB;
