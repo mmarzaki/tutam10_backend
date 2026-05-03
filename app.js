@@ -4,14 +4,12 @@ const cookieParser = require('cookie-parser');
 const connectDB = require('./database/connection');
 const authRoutes = require('./routes/auth');
 const noteRoutes = require('./routes/notes');
-// PERBAIKAN 1: Huruf 'h' kecil menyesuaikan nama file aslimu
 const errorHandler = require('./middleware/errorhandler');
 
 require('dotenv').config();
 
 const app = express();
 
-// PERBAIKAN 2: Jalankan fungsi connectDB(), bukan diekspor
 connectDB();
 
 app.use(cors({
