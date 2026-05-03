@@ -1,4 +1,4 @@
-const Note = require('../models/Note');
+const Note = require('../models/note');
 
 const MAX_NOTES = 10;
 
